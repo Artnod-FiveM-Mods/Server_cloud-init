@@ -14,9 +14,9 @@ main() {
 	wget -nv -q --show-progress $fvDlUrl -O /home/fivem/fx.tar.xz
 	cd /home/fivem
 	tar xfJ fx.tar.xz
-	wget https://raw.githubusercontent.com/Artnod-FiveM-Mods/Server-cloud-init/master/start.sh -O /home/fivem/start.sh
-	wget https://raw.githubusercontent.com/Artnod-FiveM-Mods/Server-cloud-init/master/stop.sh -O /home/fivem/stop.sh
-	wget https://raw.githubusercontent.com/Artnod-FiveM-Mods/Server-cloud-init/master/fivem.service -O /etc/systemd/system/fivem.service
+	wget https://raw.githubusercontent.com/Artnod-FiveM-Mods/Server_cloud-init/master/start.sh -O /home/fivem/start.sh
+	wget https://raw.githubusercontent.com/Artnod-FiveM-Mods/Server_cloud-init/master/stop.sh -O /home/fivem/stop.sh
+	wget https://raw.githubusercontent.com/Artnod-FiveM-Mods/Server_cloud-init/master/fivem.service -O /etc/systemd/system/fivem.service
 
 	echo "  - Fivem public server-data"
 	git clone https://github.com/citizenfx/cfx-server-data.git /home/fivem/server-data
