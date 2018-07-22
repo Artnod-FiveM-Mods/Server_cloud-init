@@ -1,0 +1,36 @@
+#cloud-config
+
+apt_update: true
+apt_upgrade: true
+
+
+packages:
+ - mysql-client
+ - mysql-server
+ - xz-utils
+ - git
+ - screen
+ - unzip
+ - python3
+ - python3-pip
+
+ssh_authorized_keys:
+  - ssh-rsa <your one-line public key> root@localhost
+
+
+
+ssh_keys:
+  rsa_private: |
+    -----BEGIN RSA PRIVATE KEY-----
+    <your private key for github>
+    -----END RSA PRIVATE KEY-----
+
+  rsa_public: ssh-rsa <your one-line public key for github> root@localhost
+
+
+runcmd:
+  - [ sh, -c, "wget https://raw.githubusercontent.com/Artnod-FiveM-Mods/Server-cloud-init/master/bootstrap.sh -O /root/bootstrap.sh" ]
+  - [ sh, -c, "sed -i -e 's/\r$//' /root/bootstrap.sh" ]
+  - [ sh, -c, "chmod +x /root/bootstrap.sh" ]
+  - [ sh, -c, "/root/bootstrap.sh" ]
+  - [ sh, -c, "rm -f /root/bootstrap.sh" ]
