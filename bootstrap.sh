@@ -39,7 +39,7 @@ main() {
 
 
 if [ -z $1 ]; then
-	showHelp
+	echo "  - https://github.com/Artnod-FiveM-Mods/Server-cloud-init"
 	exit 0
 fi
 
