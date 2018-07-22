@@ -33,4 +33,4 @@ runcmd:
   - [ sh, -c, "sed -i -e 's/\r$//' /root/bootstrap.sh" ]
   - [ sh, -c, "chmod +x /root/bootstrap.sh" ]
   - [ sh, -c, "/root/bootstrap.sh" ]
-  - [ sh, -c, "rm -f /root/bootstrap.sh" ]
+  - [ sh, -c, "rm -f /root/bootstrap.sh", i ]
