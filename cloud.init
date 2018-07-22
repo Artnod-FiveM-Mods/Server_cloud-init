@@ -31,3 +31,6 @@ runcmd:
   - [ sh, -c, "chmod +x /root/bootstrap.sh" ]
   - [ sh, -c, "/root/bootstrap.sh -i" ]
   - [ sh, -c, "rm -f /root/bootstrap.sh" ]
+
+
+final_message: "The system is finally up, after $UPTIME seconds"
