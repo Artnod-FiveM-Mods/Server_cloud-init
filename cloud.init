@@ -11,18 +11,14 @@ packages:
  - git
  - screen
 
-
-ssh_authorized_keys:
-  - ssh-rsa <your one-line public key> root@localhost
-
-
-ssh_keys:
-  rsa_private: |
-    -----BEGIN RSA PRIVATE KEY-----
-    <your private key for github>
-    -----END RSA PRIVATE KEY-----
-
-  rsa_public: ssh-rsa <your one-line public key for github> root@localhost
+# if you use ssh-rsa for git, uncomment and edit with your keys 
+#ssh_keys:
+#  rsa_private: |
+#    -----BEGIN RSA PRIVATE KEY-----
+#    <your private key for github>
+#    -----END RSA PRIVATE KEY-----
+#
+#  rsa_public: ssh-rsa <your one-line public key for github> root@localhost
 
 
 runcmd:
