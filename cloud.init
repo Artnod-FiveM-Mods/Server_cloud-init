@@ -14,9 +14,9 @@ packages:
  - python3
  - python3-pip
 
+
 ssh_authorized_keys:
   - ssh-rsa <your one-line public key> root@localhost
-
 
 
 ssh_keys:
