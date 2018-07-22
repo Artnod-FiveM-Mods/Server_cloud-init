@@ -29,5 +29,5 @@ runcmd:
   - [ sh, -c, "wget https://raw.githubusercontent.com/Artnod-FiveM-Mods/Server-cloud-init/master/bootstrap.sh -O /root/bootstrap.sh" ]
   - [ sh, -c, "sed -i -e 's/\r$//' /root/bootstrap.sh" ]
   - [ sh, -c, "chmod +x /root/bootstrap.sh" ]
-  - [ sh, -c, "/root/bootstrap.sh", -i ]
+  - [ sh, -c, "/root/bootstrap.sh -i" ]
   - [ sh, -c, "rm -f /root/bootstrap.sh" ]
