@@ -1,0 +1,12 @@
+[Unit]
+Description=FiveM server Daemon
+After=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/home/fivem/start.sh
+ExecStop=/home/fivem/stop.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
