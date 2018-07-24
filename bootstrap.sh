@@ -50,7 +50,6 @@ customInstall() {
 	sed -i -e 's/\r$//' /root/fmm/bootstrap.sh
 	chmod +x /root/fmm/bootstrap.sh
 	/root/fmm/bootstrap.sh -i
-	
 }
 
 main() {
@@ -70,7 +69,7 @@ fi
 while getopts "hic" opt; do
 	case "$opt" in
 		h)
-			showHelp
+			echo "  - https://github.com/Artnod-FiveM-Mods/Server-cloud-init"
 			exit 0
 			;;
 		i)
