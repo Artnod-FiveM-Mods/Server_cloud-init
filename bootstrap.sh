@@ -10,7 +10,7 @@ defaultInstall() {
 	fi
 
 	echo "  - *** Fivem Download ***"
-	fvDlUrl="https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/679-996150c95a1d251a5c0c7841ab2f0276878334f7/fx.tar.xz"
+	fvDlUrl="https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/807-a33d6db066568046a9a99b14b0fccb03bb978e2f/fx.tar.xz"
 	wget -nv -q --show-progress $fvDlUrl -O /home/fivem/fx.tar.xz
 	cd /home/fivem
 	tar xfJ fx.tar.xz
