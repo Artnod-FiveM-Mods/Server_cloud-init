@@ -1,5 +1,9 @@
 #!/bin/bash
 
+fvDlUrl = "https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/934-7f9ae6058670496feddc7c81f8687368c76fde99/fx.tar.xz"
+gitUser = "artnod78"
+gitMail = "artnod78@gmail.com"
+
 defaultInstall() {
 	echo "  - *** Fivem user and group ***"
 	useradd -d /home/fivem -m -r -s /bin/bash -U fivem
@@ -8,9 +12,7 @@ defaultInstall() {
 		echo "  - fx.tar.xz Already exists"
 		rm -fr /home/fivem/fx.tar.xz
 	fi
-
 	echo "  - *** Fivem Download ***"
-	fvDlUrl="https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/807-a33d6db066568046a9a99b14b0fccb03bb978e2f/fx.tar.xz"
 	wget -nv -q --show-progress $fvDlUrl -O /home/fivem/fx.tar.xz
 	cd /home/fivem
 	tar xfJ fx.tar.xz
@@ -40,8 +42,8 @@ customInstall() {
 	cp /etc/ssh/ssh_host_rsa_key /root/.ssh/id_rsa
 	cp /etc/ssh/ssh_host_rsa_key.pub /root/.ssh/id_rsa.pub
 	ssh-keygen -F github.com || ssh-keyscan github.com >> /root/.ssh/known_hosts
-	git config --global user.name "artnod78"
-	git config --global user.mail "artnod78@gmail.com"
+	git config --global user.name $gitUser
+	git config --global user.mail $gitMail
 	
 	echo "  - *** Clone Custom repo ***"
 	git clone git@github.com:artnod78/Fivem-Server.git /root/fmm
